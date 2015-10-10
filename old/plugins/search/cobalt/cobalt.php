@@ -1,0 +1,171 @@
+<?php
+/**
+ * Cobalt by MintJoomla
+ * a component for Joomla! 1.7 - 2.5 CMS (http://www.joomla.org)
+ * Author Website: http://www.mintjoomla.com/
+ * @copyright Copyright (C) 2012 MintJoomla (http://www.mintjoomla.com). All rights reserved.
+ * @license GNU/GPL http://www.gnu.org/copyleft/gpl.html
+ */
+defined('_JEXEC') or die();
+
+require_once JPATH_SITE . '/components/com_content/router.php';
+
+class plgSearchCobalt extends JPlugin
+{
+
+	function onContentSearchAreas()
+	{
+		
+		static $areas = null;
+		
+		if($areas == null)
+		{
+			$sql = "SELECT * FROM #__js_res_sections";
+			
+			$sections = $this->params->get('sections', array());
+			if($sections)
+			{
+				$sql .= " WHERE id NOT IN(" . implode(',', $sections) . ")";
+			}
+			$db = JFactory::getDbo();
+			$db->setQuery($sql);
+			$sec = $db->loadObjectList('id');
+			
+			foreach($sec as $section)
+			{
+				$areas[$section->id . '_section'] = $section->name;
+			}
+		}
+		
+		return $areas;
+	}
+
+	function onContentSearch($text, $phrase = '', $ordering = '', $areas = null)
+	{
+		$out = array();
+		$text = trim($text);
+		
+		if($text == '')
+		{
+			return $out;
+		}
+		
+		$db = JFactory::getDbo();
+		$app = JFactory::getApplication();
+		$user = JFactory::getUser();
+		$groups = implode(',', $user->getAuthorisedViewLevels());
+		$tag = JFactory::getLanguage()->getTag();
+		
+		require_once JPATH_SITE . '/components/com_cobalt/library/php/helpers/helper.php';
+		require_once JPATH_SITE . '/components/com_content/helpers/route.php';
+		require_once JPATH_SITE . '/administrator/components/com_search/helpers/search.php';
+		$searchText = $text;
+		$intersect = array_keys($this->onContentSearchAreas());
+		if(is_array($areas))
+		{
+			$intersect = array_intersect($areas, array_keys($this->onContentSearchAreas()));
+		}
+		
+		if(! $intersect)
+		{
+			return $out;
+		}
+		JArrayHelper::toInteger($intersect);
+		
+		$sArchived = $this->params->get('search_archived', 1);
+		$limit = $this->params->def('search_limit', 50);
+		
+		$nullDate = $db->getNullDate();
+		$date = JFactory::getDate();
+		$now = $date->toSql();
+		
+		$query = $db->getQuery(TRUE);
+		
+		$query->select('*');
+		$query->from('#__js_res_record');
+		$query->where('published = 1');
+		$query->where('section_id IN (' . implode(',', $intersect) . ')');
+		
+		$search_mode = NULL;
+		$scount = explode(" ", $text);
+		ArrayHelper::clean_r($scount);
+		
+		$search = $db->quote($db->escape($text));
+		
+		if(count($scount) > 2)
+		{
+			$search_mode = ' IN NATURAL LANGUAGE MODE';
+			foreach($scount as $word)
+			{
+				if(in_array(substr($word, 0, 1), array(
+					'+', 
+					'-')))
+				{
+					$search_mode = ' IN BOOLEAN MODE';
+					break;
+				}
+			}
+			
+			$query->where("MATCH (fieldsdata) AGAINST ({$search}{$search_mode})");
+		}
+		elseif(count($scount) == 1)
+		{
+			$query->where("fieldsdata LIKE '%{$text}%'");
+		}
+		
+		//$query->select("MATCH (fieldsdata) AGAINST ({$search}{$search_mode}) AS searchresult");
+		
+
+		if($app->isSite() && $app->getLanguageFilter())
+		{
+			$query->where('langs IN (' . $db->Quote($tag) . ',' . $db->Quote('*') . ')');
+		}
+		
+		switch($ordering)
+		{
+			case 'oldest':
+				$order = 'ctime ASC';
+			break;
+			
+			case 'popular':
+				$order = 'hits DESC';
+			break;
+			
+			case 'alpha':
+				$order = 'title ASC';
+			break;
+			
+			case 'category':
+				$order = 'title ASC';
+			break;
+			
+			case 'newest':
+			default:
+				$order = 'ctime DESC';
+		}
+		$query->order($order);
+		
+		//echo $query;
+		
+
+		$db->setQuery($query, 0, $limit);
+		$result = $db->loadObjectList();
+		settype($result, 'array');
+		
+		$out = array();
+		
+		foreach($result as $key => $record)
+		{
+			$out[$key] = new stdClass();
+			$out[$key]->title = $record->title;
+			$out[$key]->text = $record->fieldsdata;
+			$out[$key]->created = $record->ctime;
+			$out[$key]->href = Url::record($record);
+			$areas = $this->onContentSearchAreas();
+			$out[$key]->section = $areas[$record->section_id . '_section'];
+			$out[$key]->browsernav = 0;
+		}
+		
+		return $out;
+	}
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+  <name>Helpdesk Pro</name>
+  <creationDate>September 2012</creationDate>
+  <author>Tuan Pham Ngoc</author>
+  <authorEmail>contact@joomdonation.com</authorEmail>
+  <authorUrl>http://www.joomdonation.com</authorUrl>
+  <copyright>Copyright (C) 2012 Ossolution Team</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.1.1</version>
+  <description>Professional support ticket/helpdesk system for Joomla 2.5 and Joomla 3.0</description>
+  <scriptfile>script.helpdeskpro.php</scriptfile> 
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.helpdeskpro.sql</file>
+    </sql>
+  </install>      
+  <media destination="com_helpdeskpro" folder="site/media">
+  	<folder>attachments</folder>
+  	<folder>feedback</folder>		
+	<filename>index.html</filename>	
+  </media>
+  <languages>
+	<language tag="en-GB">site/languages/en-GB/en-GB.com_helpdeskpro.ini</language>
+  </languages>
+  <files folder="site">  
+    <filename>index.html</filename>
+    <filename>helpdeskpro.php</filename>
+    <filename>controller.php</filename>	         
+    <folder>views</folder>        	     
+    <folder>helper</folder>    
+    <folder>assets</folder>        		
+  </files>
+  <administration>
+    <menu>Helpdesk Pro</menu>
+    <submenu>
+		<menu link="option=com_helpdeskpro&amp;view=configuration">Configuration</menu>      	
+		<menu link="option=com_helpdeskpro&amp;view=categories">Categories</menu>      		
+		<menu link="option=com_helpdeskpro&amp;view=tickets">Tickets</menu>	  	 				
+		<menu link="option=com_helpdeskpro&amp;view=fields">Custom Fields</menu>				
+		<menu link="option=com_helpdeskpro&amp;view=statuses">Ticket Statuses</menu>
+		<menu link="option=com_helpdeskpro&amp;view=priorities">Ticket Priorities</menu>
+		<menu link="option=com_helpdeskpro&amp;view=language">Translation</menu>
+    </submenu>    
+    <languages>
+	<language tag="en-GB">admin/languages/en-GB/en-GB.com_helpdeskpro.sys.ini</language>      
+	<language tag="en-GB">admin/languages/en-GB/en-GB.com_helpdeskpro.ini</language>
+  </languages>
+    <files folder="admin">
+	<filename>index.html</filename>
+	<filename>helpdeskpro.php</filename>
+	<filename>controller.php</filename>                	
+	<folder>assets</folder>	
+	<folder>legacy</folder>	
+	<folder>models</folder>
+	<folder>views</folder>	  
+	<folder>controllers</folder>	
+	<folder>libraries</folder>		
+	<folder>tables</folder>			
+	<folder>sql</folder>
+    </files>    
+  </administration>
+</extension>

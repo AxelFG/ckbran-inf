@@ -1,0 +1,118 @@
+#content {
+	float: right !important;
+	display: block;
+	width: 74.4681% !important;
+}
+#aside {
+	margin-left: 0;
+	margin-right: 2.12766%;
+}
+.hdp_visible {
+	display: block ;
+}
+.hdp_hidden {
+	display: none ;
+}
+table.admintable {
+	background-color: white ;
+}
+div#hdp_wrapper{
+	width: 100%;
+	background-color: #F4F4F4 ;
+}
+table.adminform {
+	background-color: #fff;
+	border: solid 1px #d5d5d5;
+	width: 100%;
+	border-collapse: collapse;
+	margin: 8px 0 10px 0;
+	margin-bottom: 15px;
+}
+
+table.adminform tr.row0 {
+	background-color: #f9f9f9;
+}
+
+table.adminform tr.row1 {
+	background-color: #eeeeee;
+}
+
+table.adminform th {
+	font-size: 1.091em;
+	padding: 6px 2px 4px 4px;
+	text-align: left;
+	height: 25px;
+	color: #000;
+	background-repeat: repeat;
+}
+
+table.adminform td {
+	padding: 5px;
+	text-align: left;
+	font-size: 1.091em;
+}
+
+#hdp_right_panel {
+	margin: 8px 0 10px 0;
+}
+#comment_heading {
+	width: 15%;
+	float: left;
+}
+#add_comment_heading{
+	float: left;
+}
+.attachment_lists {
+	background: none repeat scroll 0 0 #ECF4FB;
+	border: 1px solid #CADAE7;
+	padding: 5px 5px 5px 10px;
+	margin: 0 5px 5px;
+	float: right;
+	width: 20%;
+}
+.hdp_ticket_message_left {
+	float: left;
+	width: 70%;
+!#	text-align: justify;
+}
+.hdp_ticket_message{	
+!#	text-align: justify;
+}
+h2.hdp_heading {
+	font-size: 20px ;
+}
+#hdp_add_comment_link{
+	font-size: 18px ;
+	margin-left: 10px;
+}
+div.admintable {
+	background-color: white ;
+}
+.hdp_toolbar {
+	margin-left: 10px ;
+}
+#hdp_container {
+	margin: 0px ;
+	padding: 0px ; 
+}
+.required {
+	color: red;
+	padding-left: 3px;
+}
+ul#hdp_attachment_list li{
+	list-style: none ;
+	background: none ;
+}
+#hdp_container ul.dropdown-menu li {
+	background: none ;
+	padding-left: 0px;
+	line-height: 20px;
+}
+
+div.attachment_lists ul li {
+	line-height: 20px ;		
+}
+span.newticket_link {
+	padding-left: 30px ;
+	font-size: 16px ;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <!-- Name of the Module -->
+        <name>FIELDSATTACH - Backlink Profile</name> 
+    <!-- Name of the Author -->
+        <author>Cristian Grañó</author> 
+    <!-- Version Date of the Module -->
+        <creationDate>6-02-2013</creationDate> 
+    <!-- Copyright information -->
+        <copyright>All rights reserved by www.percha.com</copyright> 
+    <!-- License Information -->
+        <license>GPL 2.0</license> 
+    <!-- Author's email address -->
+        <authorEmail>cristian@percha.com</authorEmail> 
+    <!-- Author's website -->
+        <authorUrl>www.percha.com</authorUrl> 
+    <!-- Module version number -->
+        <version>0.1</version>
+    <!-- Description of what the module does -->
+        <description>
+	<![CDATA[ 
+		Displays extra field  
+	]]>
+	</description>
+    <!-- Listing of all files that should be installed for the module to function -->
+        <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+                <filename module="mod_backlink_profile">mod_backlink_profile.php</filename>
+                <filename>index.html</filename>
+                <filename>helper.php</filename> 
+                <filename>tmpl/default.php</filename>
+                <filename>tmpl/index.html</filename>
+		<folder>img</folder>
+		<folder>fields</folder>
+        </files>
+   <!-- Languages --> 
+ 	<languages>
+		<language tag="en-GB">en-GB.mod_backlink_profile.ini</language> 
+		<language tag="es-ES">es-ES.mod_backlink_profile.ini</language> 
+	</languages> 
+  
+    <!-- Optional parameters --> 
+<!--	<config>
+		<fields name="params" addfieldpath="/modules/mod_backlink_profile/fields">
+			<fieldset name="basic">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="CLASS" />
+ 
+				<field
+					name="id"
+					type="Fields"
+					label="ARTICLE ID" /> 
+
+                               
+			</fieldset>
+ 			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				 
+
+                    </fieldset>
+		</fields>
+	</config>  -->
+</extension>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+	<name>Helpdesk Pro content plugin</name>
+	<author>Ossolution Team</author>
+	<creationDate>Feb 2011</creationDate>
+	<copyright>Copyright (C) 2010 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>1.5.0</version>
+	<description>This plugin is used to display a form which allow users to submit support ticket in a Joomla article</description>
+	<files>
+		<filename plugin="helpdeskpro">helpdeskpro.php</filename>
+	</files>
+	<config>
+	</config>
+</extension>

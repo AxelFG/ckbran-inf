@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_TIMESTAMP" serverName="ckbran.ru" notifyRemoteChanges="true">
+    <serverData>
+      <paths name="ckbran.ru">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/ckbran/data/www/ckbran.ru" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/var/www/ckbran/data/www/ckbran.ru/uploads" />
+            <excludedPath local="true" path="$PROJECT_DIR$/uploads" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

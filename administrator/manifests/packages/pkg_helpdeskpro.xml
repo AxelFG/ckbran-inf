@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <extension type="package" version="1.6">
+	 <name>Helpdesk Pro Package</name>
+	  <packagename>helpdeskpro</packagename>
+	  <creationDate>October 2012</creationDate>
+	  <author>Tuan Pham Ngoc</author>
+	  <authorEmail>contact@joomdonation.com</authorEmail>
+	  <authorUrl>http://www.joomdonation.com</authorUrl>
+	  <copyright>Copyright (C) 2012 Ossolution Team</copyright>
+	  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	  <version>1.1.1</version>
+	  <description>Professional support ticket/helpdesk system for Joomla 2.5 and Joomla 3.0</description>
+	 <files folder="packages">
+	   <file type="component" id="helpdeskpro" >com_helpdeskpro.zip</file>	   
+	   <file type="plugin" id="helpdeskpro" group="system">plg_ticketfromcontactform.zip</file>   
+	   <file type="plugin" id="helpdeskpro" group="helpdeskpro">plg_ticketattachments.zip</file>   
+	   <file type="plugin" id="helpdeskpro" group="content">plg_contenthelpdeskpro.zip</file>   
+	 </files>
+ </extension>

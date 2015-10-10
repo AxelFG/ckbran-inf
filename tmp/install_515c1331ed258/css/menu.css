@@ -1,0 +1,116 @@
+/** CSS Document */
+
+ul.mainlevel-dtree, ul.mainlevel-dtree ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: block;
+}
+
+ul.mainlevel-dtree {
+	float: left;
+}
+
+ul.mainlevel-dtree ul {
+	margin-left: 18px;
+}
+
+ul.mainlevel-dtree .page-dtree {
+	display: block;
+	background-image: url("../images/page.gif");
+	background-position: 2px center;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+ul.mainlevel-dtree .expanded-dtree {
+	display: block;
+	background-image: url("../images/folder.gif");
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+ul.mainlevel-dtree .not_active-dtree ul {
+	display: none;
+}
+
+ul.mainlevel-dtree .separator-dtree ul {
+	display: block;
+}
+
+ul.mainlevel-dtree .active-dtree .expanded-dtree,
+ul.mainlevel-dtree .separator-dtree .expanded-dtree {
+		display: block;
+	background-image: url("../images/folderopen.gif");
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+ul.mainlevel-dtree {
+	display: block;
+	background-image: url("../images/base.gif");
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	padding-top: 18px;
+}
+
+ul.mainlevel-dtree, ul.mainlevel-dtree a, ul.mainlevel-dtree span {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+ul.mainlevel-dtree img {
+	border: 0px;
+}
+
+ul.mainlevel-dtree a:hover {
+	text-decoration: underline;
+}
+
+ul.mainlevel-dtree a span span {
+	padding: 0px 4px 0px 4px;
+}
+
+ul.mainlevel-dtree #active_menu-dtree span span {
+	color: #303030;
+	background-color: #C0D2EC;
+	clear: right;
+}
+
+
+/* the following is mainly copied from dtree.css (see below) */
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landrö               |
+|--------------------------------------------------*/
+
+.dtree {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	white-space: nowrap;
+}
+.dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.dtree a {
+	text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 4px 1px 4px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+	text-decoration: underline;
+}
+.dtree a.nodeSel {
+	color: #333;
+	background-color: #c0d2ec;
+}
+.dtree .clip {
+	overflow: hidden;
+}

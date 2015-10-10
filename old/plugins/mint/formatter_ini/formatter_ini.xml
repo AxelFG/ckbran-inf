@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="mint" method="upgrade">
+	<name>Cobalt - Plugin - Formatter - INI</name>
+    <author>MintJoomla</author>
+    <creationDate>October 15 2012</creationDate>
+    <copyright>MintJoomla</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>support@mintjoomla.com</authorEmail>
+    <authorUrl>http://www.mintjoomla.com</authorUrl>
+	<version>8.19</version>
+	<description>
+	<![CDATA[ INI formatter plugin for Cobalt 8 ]]>
+	</description>
+	<files>
+		<filename plugin="formatter_ini">formatter_ini.php</filename>
+		<folder>tmpl</folder>
+	</files>
+</extension>

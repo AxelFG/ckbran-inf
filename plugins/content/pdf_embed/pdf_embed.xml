@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>pdf_embed</name>
+	<creationDate>14th May 2013</creationDate>
+	<author>TechJoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://techjoomla.com</authorUrl>
+	<copyright>Copyright © 2013 - All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<version>2.0</version>
+	<description>PLG_PDF_EMBED_DESC</description>
+
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_content_pdf_embed.ini</language>
+		<language tag="en-GB">en-GB.plg_content_pdf_embed.sys.ini</language>
+	</languages>
+
+	<files>
+		<filename plugin="pdf_embed">pdf_embed.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<!-- parameters for Joomla 2.5 -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

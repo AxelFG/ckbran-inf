@@ -1,0 +1,57 @@
+<patTemplate:tmpl name="menu">
+<script type="text/javascript" language="JavaScript" src="{TEMPLATE_HOME}/js/dtree.js"></script>
+<script type="text/javascript" language="JavaScript" src="{TEMPLATE_HOME}/js/menu.js"></script>
+<div id="dtree-menu_{MENU_LEVEL}{CLASS_SUFFIX}" class="menu{CLASS_SUFFIX}">
+{MENU_LIST}
+</div>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+
+menuTemplate_dtree_show('dtree-menu_{MENU_LEVEL}{CLASS_SUFFIX}', '{CLASS_SUFFIX}', '{TEMPLATE_HOME}');
+
+//-->
+</script>
+</patTemplate:tmpl>
+
+<patTemplate:tmpl name="menu_list" whitespace="trim">
+<ul
+  id="menulist_{HIERARCHY}{CLASS_SUFFIX}"
+<patTemplate:tmpl name="condition_LEVEL" type="condition" conditionvar="LEVEL" varscope="menu_list" whitespace="trim">
+<patTemplate:sub condition="0">
+  class="mainlevel{CLASS_SUFFIX}"
+</patTemplate:sub>
+</patTemplate:tmpl>
+>{MENU_ITEMS}</ul>
+</patTemplate:tmpl>
+
+<patTemplate:tmpl name="menu_item" whitespace="trim">
+<li
+<patTemplate:tmpl name="condition_IS_ACTIVE" type="condition" conditionvar="IS_ACTIVE" varscope="menu_item" whitespace="trim">
+<patTemplate:sub condition="1">
+  class="active{CLASS_SUFFIX}"
+</patTemplate:sub>
+<patTemplate:sub condition="__default">
+
+<patTemplate:tmpl name="condition_IS_SEPARATOR" type="condition" conditionvar="IS_SEPARATOR" varscope="menu_item" whitespace="trim">
+<patTemplate:sub condition="1">
+  class="separator{CLASS_SUFFIX}"
+</patTemplate:sub>
+<patTemplate:sub condition="__default">
+  class="not_active{CLASS_SUFFIX}"
+</patTemplate:sub>
+</patTemplate:tmpl>
+
+</patTemplate:sub>
+</patTemplate:tmpl>
+>
+
+<patTemplate:tmpl name="condition_HAS_SUB_MENU_ITEMS" type="condition" conditionvar="HAS_SUB_MENU_ITEMS" varscope="menu_item" whitespace="trim">
+<patTemplate:sub condition="1">
+{LINK_OPEN}<span class="expanded{CLASS_SUFFIX}"><span>{CAPTION}</span></span>{LINK_CLOSE}
+</patTemplate:sub>
+<patTemplate:sub condition="__default">
+{LINK_OPEN}<span class="page{CLASS_SUFFIX}"><span>{CAPTION}</span></span>{LINK_CLOSE}
+</patTemplate:sub>
+</patTemplate:tmpl>{SUB_MENU_ITEMS}</li>
+</patTemplate:tmpl>

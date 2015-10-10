@@ -1,0 +1,88 @@
+.icon-32-export {
+	background-image:url("../icons/export.png");
+}
+table.admintable td label {
+	clear: none ;
+	min-width: 40px;
+	margin : 3px 2px ;
+	display: inline-block; 
+}
+
+table.admintable td.key {
+	font-weight: bold ;
+}
+
+fieldset.adminform {
+	background-color: white ;
+}
+
+table.admintable {
+	background-color: white ;	
+}
+span.submitter_name, span.submitter_email {
+	display: block ;
+}
+#hdp_right_panel {
+	margin: 8px 0 10px 0;
+}
+#comment_heading {
+	width: 15%;
+	float: left;
+}
+#add_comment_heading{
+	float: left;
+}
+.attachment_lists {
+	background: none repeat scroll 0 0 #ECF4FB;
+	border: 1px solid #CADAE7;
+	padding: 5px 5px 5px 10px;
+	margin: 0 5px 5px;
+	float: right;
+	width: 20%;
+}
+.hdp_ticket_message_left {
+	float: left;
+	width: 75%;
+	text-align: justify;
+}
+.hdp_ticket_message{	
+	text-align: justify;
+}
+h2.hdp_heading {
+	font-size: 20px ;
+}
+#hdp_add_comment_link{
+	font-size: 18px ;
+	margin-left: 10px;
+}
+div.admintable {
+	background-color: white ;
+}
+.hdp_toolbar {
+	margin-left: 10px ;
+}
+#hdp_container {
+	margin: 0px;
+	padding: 0px;
+}
+ul#hdp_attachment_list li{
+	list-style: none ;	
+}
+table.admintable td label {
+	clear: none ;
+	min-width: 40px;
+	margin : 3px 2px ;
+	display: inline-block; 
+}
+fieldset.adminform {
+	border: none ;	
+}
+.form-horizontal label.control-label {
+	text-align: left;
+}
+
+.form-horizontal div.controls label {	
+	clear: none ;
+	min-width: 40px;
+	display: inline-block; 
+}

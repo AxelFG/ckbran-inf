@@ -1,0 +1,6 @@
+<Files ~ ".(php)$">
+Deny from all
+</Files>
+<Files ~ "map.(php)$">
+Allow from all
+</Files>

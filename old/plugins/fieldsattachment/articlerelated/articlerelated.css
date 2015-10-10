@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.fieldstags{ overflow: hidden; list-style: none;}
+.fieldstags li{ padding: 3px 0;}
+.fieldstags .label{ float:left; width: 60px; }
+.file{ margin: 10px 0 0 0;} 
+
+.listtags{ margin: 20px 0 20px 0;}
+
+.deletetag{ overflow: hidden; padding: 10px 10px 0px 0; float:left;  border:#ddd 1px solid; margin: 0 3px 0 0;  }
+.deletetag div{ float:left;position:relative;  width:18px; height:18px; background-image: url("img/delete.png"); margin: 0px 5px 0 5px; top:-4px;}

@@ -1,0 +1,89 @@
+
+.slide-desc-bg {
+	background: rgba(0,0,0,0.25);	
+}
+.slide-desc-text {
+	font-size: 16px;
+	color: #404040;
+	text-align: left;
+	background: #fff;
+	background: rgba(255,255,255,0.9);
+}
+.slide-desc-text .slide-title {
+	font-family: "PT Sans Narrow";
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1;
+	padding-top: 12px;
+	padding-bottom: 8px;
+}
+.slide-desc-text .slide-title a {
+	color: #404040;
+	text-decoration: none;
+}
+.slide-title, .slide-text, .readmore {
+}
+.slide-title, .slide-text {
+	padding: 0 12px 0 60px;
+}
+.slide-text {
+	font-size: 18px;
+	line-height: 24px;	
+	padding: 8px 12px 8px 60px;
+}
+.slide-text p {
+	margin: 0;	
+}
+.readmore {
+	background: #fff;
+	border-left: 4px solid #2F6497;
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 6px 12px;
+	color: #2F6497;
+	text-decoration: none;
+}
+.readmore:hover {
+	background: #2F6497;
+	color: #fff;
+}
+.djslider .navigation-container a {
+	outline: none;
+}
+.djslider-loader {
+	background: url(loader.gif) center center no-repeat;
+}
+
+.djslider li {
+	text-align: center;
+}
+
+span.load-button {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border: 1px solid #808080;
+	margin: 0 4px;
+	cursor: pointer;
+	border-radius: 7px;
+}
+span.load-button-active {
+	background: #808080;
+}
+
+/*** image on the left and 100% height of description area ***/
+/*
+#slider45 li {
+	text-align: left;
+}
+#slider45 .slide-desc,
+#slider45 .slide-desc-in {
+	height: 100%;
+}
+#slider45 .slide-desc-bg {
+	opacity: 1;
+	filter: alpha(opacity = 100);
+}
+*/

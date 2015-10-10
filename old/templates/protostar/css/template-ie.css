@@ -1,0 +1,46 @@
+.navigation .nav > li {
+	display: block;
+	float: left;
+}
+.navigation ul.popup {
+	position: relative;
+}
+.banneritem {
+	float: left;
+	display: block;
+	margin: 4px;
+	width: 32% !important;
+}
+.navigation li {
+	position: relative;
+	z-index: 3000;
+}
+.navigation li ul.popup, .navigation li ul.nav-child {
+	z-index: 10;
+}
+.navigation li ul.popup li {
+	float: none
+	display: block;
+}
+.sidebar-form {
+	display: block;
+	float: right;
+	width: 36%;
+}
+#hdp_container {
+	display: block;
+	float: left;
+	width: 64%;
+}
+#aside {
+	margin-left: 20px;
+}
+ .navigation li ul.popup {
+		width: 464px !important;
+}
+ .navigation li#mainlevelhospital ul.popup {
+		width: 720px !important;
+}
+.popup {
+	border: 1px solid #333 !important;
+}

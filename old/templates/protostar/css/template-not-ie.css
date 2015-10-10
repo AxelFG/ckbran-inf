@@ -1,0 +1,53 @@
+.navigation li ul.popup, .navigation li ul.nav-child {
+	position: absolute;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 120px;
+	width: 640px;
+	padding: 5px 8px;
+	margin: 0;
+	list-style: none;
+	background: #475F82;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.2);
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+        -moz-column-count: 3;
+        -moz-column-gap: 50%;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 50%;
+        column-count: 3;
+        column-gap: 50%;
+		-moz-column-width: 160px;
+		-webkit-column-width: 160px;
+		column-width: 160px;
+}
+.navigation li li {
+	display: inline-block;
+	vertical-align: top;
+}
+ .navigation li:nth-child(3) ul {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+		width: 416px;
+}
+ .navigation li:nth-child(4) ul {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+		width: 416px;
+}
+.navigation li li:nth-child(3) ul, .navigation li li:nth-child(4) ul,  .navigation li:nth-child(3) li ul, .navigation li:nth-child(4) li ul {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+		width: 172px;
+}

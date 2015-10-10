@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_KAZAAM</name>
+	<creationDate>2nd October 2012</creationDate>
+	<author>Barnaby V. Dixon</author>
+	<authorEmail>barnaby@php-web-design.com</authorEmail>
+	<authorUrl>http://www.php-web-design.com</authorUrl>
+	<copyright>(C) Barnaby Dixon 2011-2012 All rights reserved.</copyright>
+	<version>1.6.3</version>
+	<license>GNU/GPL</license>
+	<description>PLG_KAZAAM_DESC</description>
+	<files>
+        <filename plugin="kazaam">kazaam.php</filename>
+        <filename>install.sql</filename>
+        <filename>uninstall.sql</filename>
+        <folder>kazaam</folder>
+        <folder>models</folder>
+        <folder>css</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_kazaam.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_kazaam.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/kazaam/models/fields">
+        <fieldset name="basic">
+		<field name="arts" type="list" default="1" label="PLG_KAZAAM_ARTICLES" description="PLG_KAZAAM_ARTICLES_DESC"><option value="0">PLG_KAZAAM_NO</option><option value="1">PLG_KAZAAM_YES</option></field>
+        <field name="cats" type="CategoryList" label="PLG_KAZAAM_CATS" description="PLG_KAZAAM_CATS_DESC" />
+        <field name="regenerate" type="list" default="1" label="PLG_KAZAAM_REGEN" description="PLG_KAZAAM_REGEN_DESC"><option value="0">PLG_KAZAAM_NO</option><option value="1">PLG_KAZAAM_YES</option></field>
+        </fieldset>
+		</fields>
+	</config>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.sql</file>
+		</sql>
+	</uninstall>
+</extension>

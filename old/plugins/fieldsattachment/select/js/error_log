@@ -1,0 +1,1 @@
+[21-Apr-2013 19:44:10 America/New_York] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20090626/imagick.so' - libMagickCore.so.4: cannot map zero-fill pages: Cannot allocate memory in Unknown on line 0
